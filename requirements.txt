@@ -1,0 +1,2 @@
+verovio>=4.0
+pyinstaller>=6.0
