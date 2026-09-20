@@ -13,6 +13,7 @@ from .omr import find_audiveris
 from .pipeline import convert_file
 
 APP_NAME = "Nota Çevirici"
+APP_VERSION = "1.0.3"
 
 
 def _config_file() -> Path:
@@ -58,7 +59,7 @@ def run_gui() -> None:
 
     cfg = load_config()
     root = tk.Tk()
-    root.title(APP_NAME)
+    root.title(f"{APP_NAME} {APP_VERSION}")
     root.geometry("640x460")
 
     src_var = tk.StringVar()
@@ -162,6 +163,7 @@ def run_gui() -> None:
         root.after(150, poll)
 
     btn.configure(command=start)
+    append(f"Sürüm {APP_VERSION}")
     if not aud_var.get():
         append("Audiveris bulunamadı. PDF/JPEG için Audiveris kurulmalı "
                "(MusicXML dosyaları Audiveris olmadan da çevrilebilir).")

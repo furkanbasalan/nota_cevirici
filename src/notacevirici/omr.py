@@ -76,6 +76,7 @@ def run_audiveris(exe: str, input_path: Path, out_dir: Path, log: Log,
     if not (str(safe_input).isascii() and str(out_dir).isascii()):
         log("Uyarı: geçici klasör yolunda ASCII olmayan karakter var; Audiveris hata verebilir.")
     cmd = [exe, "-batch", "-transcribe", "-export", "-output", str(out_dir), str(safe_input)]
+    log("Komut: " + " ".join(cmd))
     log("Nota tanıma başlatıldı (büyük dosyalarda birkaç dakika sürebilir)...")
     try:
         proc = subprocess.run(
