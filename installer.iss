@@ -1,6 +1,6 @@
 ﻿[Setup]
 AppName=Nota Çevirici
-AppVersion=1.0.0
+AppVersion=1.0.3
 AppPublisher=Nota Çevirici
 DefaultDirName={autopf}\NotaCevirici
 DefaultGroupName=Nota Çevirici
